@@ -1,0 +1,20 @@
+[
+  {
+    "timestep_ps_tested": 0.0005,
+    "all_timestamps_match": true,
+    "first_frame_distance_error_A": 2.90101432254275e-06,
+    "max_distance_error_A": 3.891226532415547,
+    "first_frame_cn_error": 8.687406594831693e-05,
+    "max_cn_error": 1.9538789905150817,
+    "cv_identity_check_passed": false
+  },
+  {
+    "timestep_ps_tested": 0.001,
+    "all_timestamps_match": true,
+    "first_frame_distance_error_A": 2.90101432254275e-06,
+    "max_distance_error_A": 4.197370024119317,
+    "first_frame_cn_error": 8.687406594831693e-05,
+    "max_cn_error": 2.084368313818858,
+    "cv_identity_check_passed": false
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "blas": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/pyvenv/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/opt/pyvenv/lib/python3.13/site-packages/mdanalysis.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/pyvenv/lib/python3.13/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "benchmarks": {
+    "estk_exact": {
+      "times_s": [
+        0.573843979999765,
+        0.7447737709999274,
+        0.5420641439995961
+      ],
+      "median_s": 0.573843979999765,
+      "max_error_eV_below_0.6": 0.0,
+      "rmse_eV_below_0.6": 0.0,
+      "max_error_eV_below_1.5": 0.0,
+      "rmse_eV_below_1.5": 0.0
+    },
+    "estk_auto": {
+      "times_s": [
+        0.31643507099943236,
+        0.30880442000034236,
+        0.9523266820006029
+      ],
+      "median_s": 0.31643507099943236,
+      "max_error_eV_below_0.6": 0.001328704462999486,
+      "rmse_eV_below_0.6": 0.000371357165468082,
+      "max_error_eV_below_1.5": 0.0019655801174733867,
+      "rmse_eV_below_1.5": 0.00041043155587946366
+    },
+    "ours_separable": {
+      "times_s": [
+        0.7342597200004093,
+        0.6595957629997429,
+        0.6307695129999047
+      ],
+      "median_s": 0.6595957629997429,
+      "max_error_eV_below_0.6": 1.5543122344752192e-15,
+      "rmse_eV_below_0.6": 2.1935786324946198e-16,
+      "max_error_eV_below_1.5": 1.5543122344752192e-15,
+      "rmse_eV_below_1.5": 2.0471343504477545e-16
+    },
+    "ours_binned": {
+      "times_s": [
+        0.0707470289999037,
+        0.07083395700010442,
+        0.07087516800038429
+      ],
+      "median_s": 0.07083395700010442,
+      "max_error_eV_below_0.6": 0.02306534426510687,
+      "rmse_eV_below_0.6": 0.003854425973445198,
+      "max_error_eV_below_1.5": 0.03553093559580467,
+      "rmse_eV_below_1.5": 0.004549196492029176
+    }
+  },
+  "local_rerun": {
+    "time_s": 12.937940004000666,
+    "max_F_error_eV_below_1.5": 1.9317880628477724e-14,
+    "max_relative_ESS_difference_below_1.5": 1.2858603071208563e-12
+  },
+  "estk_with_ESS": {
+    "median_s": 1.5729774070005078,
+    "times_s": [
+      1.5729774070005078,
+      1.5544201379998412,
+      1.631379088000358
+    ],
+    "max_relative_ESS_difference_below_1.5": 9.237055564881302e-14
+  }
+}

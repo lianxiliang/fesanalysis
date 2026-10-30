@@ -1,0 +1,52 @@
+{
+  "hardware": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "numba": "0.65.1",
+    "MDAnalysis": "2.10.0"
+  },
+  "geometry": {
+    "frames": 2401,
+    "atoms": 360,
+    "read_seconds": 0.741174330999911,
+    "jit_warmup_seconds": 0.182157085000199,
+    "optimized_seconds": 0.6599096319996534,
+    "reference_seconds": 5.555266929000027,
+    "speedup_over_own_reference": 8.418223737948024,
+    "streaming_end_to_end_seconds": 1.3954615130001002,
+    "checks": {
+      "direct": {
+        "valid_frames": 1066,
+        "same_missing_mask": true,
+        "max_absolute_difference": 4.5607098153599424e-07
+      },
+      "indirect": {
+        "valid_frames": 774,
+        "same_missing_mask": true,
+        "max_absolute_difference": 4.5876251908438803e-07
+      }
+    },
+    "same_all_candidate_paths": true,
+    "both_channels_frames": 206
+  },
+  "fes": {
+    "samples": 4000,
+    "grid": [
+      101,
+      101
+    ],
+    "exact_seconds": 2.740245613999832,
+    "local_seconds": 0.5589111260001118,
+    "binned_seconds": 0.009108190000006289,
+    "local_max_error_eV": 2.0539125955565396e-15,
+    "binned_max_error_below_0p3eV": 0.008102419366950858,
+    "note": "Binned is approximate. Local uses 12-sigma truncation."
+  },
+  "limitations": [
+    "Not a comparison against the unavailable ECToolkits core.",
+    "Not a production-trajectory benchmark on CSCS.",
+    "No matching COLVAR for the supplied XYZ; no physical PT FES validated."
+  ]
+}

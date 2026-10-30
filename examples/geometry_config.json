@@ -1,0 +1,19 @@
+{
+  "selection": {
+    "donor": 151,
+    "acceptors": [131, 137, 139, 140, 130],
+    "slab_atoms": 144,
+    "index_base": 1
+  },
+  "trajectory": {
+    "cell": [10.39, 10.18, 36.17],
+    "timestep_ps": null,
+    "start": 0,
+    "stride": 1
+  },
+  "analysis": {
+    "cv_acceptor": 130,
+    "oo_cutoff": 3.5,
+    "angle_cutoff": 30.0
+  }
+}

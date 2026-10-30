@@ -1,0 +1,78 @@
+{
+  "dataset": {
+    "file": "COLVAR0",
+    "original_frames": 277301,
+    "frames": 249571,
+    "skip_first_rows": 27730,
+    "bounds": [
+      [
+        2,
+        4.5
+      ],
+      [
+        0.6,
+        2.6
+      ]
+    ],
+    "bandwidth": [
+      0.05,
+      0.05
+    ],
+    "grid": [
+      101,
+      101
+    ],
+    "bias": "opes.bias plus reconstructed original five walls",
+    "weight_range": 57.66277998681191
+  },
+  "benchmarks": {
+    "estk_exact": {
+      "times_s": [
+        1.3240308099993854,
+        0.5827721499999825
+      ],
+      "median_s": 0.9534014799996839,
+      "max_error_eV_below_0.6": 0.0,
+      "rmse_eV_below_0.6": 0.0,
+      "max_error_eV_below_1.5": 0.0,
+      "rmse_eV_below_1.5": 0.0,
+      "finite_points": 10201
+    },
+    "estk_auto": {
+      "times_s": [
+        0.34525936899990484,
+        0.48867194699960237
+      ],
+      "median_s": 0.4169656579997536,
+      "max_error_eV_below_0.6": 0.001328704462999486,
+      "rmse_eV_below_0.6": 0.000371357165468082,
+      "max_error_eV_below_1.5": 0.0019655801174733867,
+      "rmse_eV_below_1.5": 0.00041043155587946366,
+      "finite_points": 10201
+    },
+    "ours_local": {
+      "times_s": [
+        12.370919695999874,
+        12.324679344999822
+      ],
+      "median_s": 12.347799520499848,
+      "max_error_eV_below_0.6": 9.381384558082573e-15,
+      "rmse_eV_below_0.6": 5.8471407281620855e-15,
+      "max_error_eV_below_1.5": 1.9317880628477724e-14,
+      "rmse_eV_below_1.5": 5.0650678657098846e-15,
+      "finite_points": 10201
+    },
+    "ours_binned": {
+      "times_s": [
+        0.06854835700050899,
+        0.0674680209995131
+      ],
+      "median_s": 0.06800818900001104,
+      "max_error_eV_below_0.6": 0.02306534426510687,
+      "rmse_eV_below_0.6": 0.003854425973445198,
+      "max_error_eV_below_1.5": 0.03553093559580467,
+      "rmse_eV_below_1.5": 0.004549196492029176,
+      "finite_points": 10201
+    }
+  }
+}

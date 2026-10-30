@@ -1,0 +1,22 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "inputs": {
+    "enhanced-sampling-toolkit-claude-gifted-sagan-lagdek.zip": {
+      "sha256": "5820c217063998ba380976b472266fe5e85baf1263a8b84ce1b58f6a6d17c300",
+      "bytes": 1266434
+    },
+    "bivo4-fes-v0.1.1.zip": {
+      "sha256": "5435c290ef39638c2f07ac4117bc91af89a59d8056152266829112715ee71f96",
+      "bytes": 1281562
+    },
+    "COLVAR0": {
+      "sha256": "bfb00ee3fb640ba4099469c26f5921e304e807006f9d1a444194d1bca513c6e6",
+      "bytes": 33600389
+    },
+    "output(1).xyz": {
+      "sha256": "5abcf931ae4ec3b57c01aee6921a175053303d2e52fb820f0f9ed09be6b78fa0",
+      "bytes": 22530801
+    }
+  }
+}

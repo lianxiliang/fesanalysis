@@ -1,0 +1,22 @@
+[
+  {
+    "notebook": "01_geometry.ipynb",
+    "status": "passed",
+    "seconds": 5.816349426000215
+  },
+  {
+    "notebook": "02_reweighting_and_fes.ipynb",
+    "status": "passed",
+    "seconds": 5.127366430000166
+  },
+  {
+    "notebook": "03_minimum_energy_path.ipynb",
+    "status": "passed",
+    "seconds": 4.483204366999871
+  },
+  {
+    "notebook": "04_multiple_runs_and_extensions.ipynb",
+    "status": "passed",
+    "seconds": 4.9455587419997755
+  }
+]

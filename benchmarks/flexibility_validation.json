@@ -1,0 +1,9 @@
+{
+  "v0.1.0_to_v0.1.1_default_outputs_identical": true,
+  "frames": 2401,
+  "cached_reselection_seconds": 0.01522127999987788,
+  "custom_notebook_executed": true,
+  "tests_passed": 44,
+  "branch_comparison_performed": false,
+  "branch_retrieval": "GitHub page, raw URL, archive and git access failed in this environment."
+}

@@ -1,0 +1,25 @@
+{
+  "nan_gap": {
+    "nan_images": 5,
+    "reported_barrier_eV": 0.93858016,
+    "converged": true,
+    "ours": "Initial string crosses unsupported/outside FES cells. Use a supported midpoint or minimax_path initializer."
+  },
+  "analytic_mep": {
+    "expected_barrier_eV": 1.0,
+    "ours_barrier_eV": 1.0,
+    "estk_barrier_eV": 1.0,
+    "ours_converged": true,
+    "estk_converged": true,
+    "ours_seconds": 0.11399812800027576,
+    "estk_seconds": 0.10622264099947643,
+    "max_path_distance": 6.035706409087017e-05
+  },
+  "extreme_weights_stress_only": {
+    "estk_exact": 30.1606664175075,
+    "estk_binned": 75.40166604376876,
+    "ours_local": 30.1606664175075,
+    "ours_separable": 30.1606664175075,
+    "ours_binned": "inf"
+  }
+}
