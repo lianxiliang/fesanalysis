@@ -120,24 +120,64 @@ def iter_mdanalysis(universe, *, cell=None, timestep_ps=None, frame_dt_ps=None,
         yield Frame(ts.frame, ts.positions, as_box(box), step, time)
 
 
-def read_colvar(path):
-    """Read named PLUMED columns. Repeated identical headers are allowed."""
+def read_colvar(path, *, timestep_ps=None):
+    """Read named PLUMED columns or i-PI EXTRAS_BIAS output."""
     fields = None
+    steps = []
+    ipi_format = False
+
     with _open(path) as f:
         for line in f:
-            if line.startswith("#! FIELDS"):
-                names = line.split()[2:]
+            s = line.strip()
+
+            # Standard PLUMED format
+            if s.startswith("#! FIELDS"):
+                names = s.split()[2:]
                 if fields is not None and names != fields:
                     raise ValueError("COLVAR column schema changed within the file.")
                 fields = names
+
+            # i-PI EXTRAS_BIAS format
+            elif s.startswith("#EXTRAS_BIAS("):
+                ipi_format = True
+
+                names = s.split("(", 1)[1].split(")", 1)[0].split(",")
+                names = [name.strip() for name in names]
+
+                if fields is not None and names != fields:
+                    raise ValueError("COLVAR column schema changed within the file.")
+                fields = names
+
+                match = re.search(r"Step:\s*(\d+)", s)
+                if match is None:
+                    raise ValueError("Cannot read Step from i-PI COLVAR header.")
+                steps.append(int(match.group(1)))
+
     if fields is None:
-        raise ValueError("Missing '#! FIELDS' header.")
+        raise ValueError(
+            "Missing '#! FIELDS' or '#EXTRAS_BIAS(...)# Step:' header."
+        )
+
     with _open(path) as f:
         data = np.loadtxt(f, comments="#", ndmin=2)
+
     if data.shape[1] != len(fields):
         raise ValueError("COLVAR column count does not match its header.")
-    return dict(zip(fields, data.T))
 
+    result = dict(zip(fields, data.T))
+
+    if ipi_format:
+        if len(steps) != len(data):
+            raise ValueError(
+                "Number of i-PI Step headers does not match number of data rows."
+            )
+
+        result["step"] = np.asarray(steps, dtype=int)
+
+        if timestep_ps is not None:
+            result["time"] = result["step"] * timestep_ps
+
+    return result
 
 def align_colvar(times, colvar, *, tolerance=1e-5):
     """Exact-nearest time matching, not bias interpolation or blind row slicing.
